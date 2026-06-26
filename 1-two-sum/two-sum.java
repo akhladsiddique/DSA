@@ -1,20 +1,15 @@
 class Solution {
-    public int[] twoSum(int[] arr, int x) {
-        int[] ans= new int[2];
-        int n =arr.length;
+    public int[] twoSum(int[] nums, int target) {
+        int n=nums.length;
         for(int i=0;i<n;i++){
-            for(int j=i+1;j<n ;j++){
-                if(arr[i]+arr[j]==x){
-                    ans[0]=i;
-                    ans[1]=j;
-                    break;
+            for(int j=i+1;j<n;j++){
+                if(nums[i]+nums[j]==target){
+                    return new int[] {i, j};
                 }
             }
         }
-        return ans;
+
+        return new int[] {-1,-1};
         
     }
-    
 }
-        
-    
